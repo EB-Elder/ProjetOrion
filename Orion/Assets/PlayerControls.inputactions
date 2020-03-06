@@ -101,6 +101,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4e92f48a-a024-4ab1-a24e-d38874694a42",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "125e79e0-7ad0-4986-b35b-f5d00722bc65",
                     "path": "<XInputController>/leftStick/up",
                     "interactions": "",
@@ -136,6 +147,17 @@
                     "name": "",
                     "id": "ae952839-25e1-4673-a0ad-ccf98f758d3f",
                     "path": "<XInputController>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a6b9268-4d99-4f08-bd5d-9440cd3201e0",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -189,6 +211,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b6f501a9-fa33-4826-b038-683f3a515d95",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "73f08087-280d-4b69-bfa9-b963dd986788",
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
@@ -233,6 +266,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5ce297c1-e29f-4ae2-91c0-255a2c7b72e7",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "818d8941-25fd-43dd-a3e0-0379b520b368",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -255,6 +299,17 @@
                 },
                 {
                     "name": "",
+                    "id": "5f226a96-9fd9-4376-9901-40865b790406",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7237d311-fcd3-4f42-a6a2-2e50b1a091ab",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -268,6 +323,17 @@
                     "name": "",
                     "id": "944e1116-eea1-491f-a694-3bc366eddd08",
                     "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c35af29a-7ab4-4f79-88dc-467a99fbd352",
+                    "path": "<Keyboard>/backspace",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
