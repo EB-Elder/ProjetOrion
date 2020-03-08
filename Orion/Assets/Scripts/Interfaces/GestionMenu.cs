@@ -14,28 +14,93 @@ public struct Ligne
 public class GestionMenu : MonoBehaviour
 {
     [SerializeField] List<Ligne> boutons;
-    [SerializeField] private int ligneDepart;
-    [SerializeField] private int colonneDepart;
+    [SerializeField] private int currentLigne;
+    [SerializeField] private int currentColonne;
 
-    private Vector2 currentButton = new Vector2();
     private PlayerControls gestionInput;
 
     private void Awake()
     {
-        
+        gestionInput = new PlayerControls();
+
+        gestionInput.Menus.MoveDown.performed += ctx => Descendre();
+        gestionInput.Menus.MoveUp.performed += ctx => Monter();
+        gestionInput.Menus.MoveLeft.performed += ctx => SlideGauche();
+        gestionInput.Menus.MoveRight.performed += ctx => SlideDroite();
+        gestionInput.Menus.Validate.performed += ctx => ValiderBouton();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        boutons[ligneDepart].boutons[colonneDepart].image.color = boutons[ligneDepart].boutons[colonneDepart].colors.highlightedColor;
-        currentButton.x = ligneDepart;
-        currentButton.y = colonneDepart;
+        boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
+        gestionInput.Menus.Enable();
     }
 
-    // Update is called once per frame
-    void Update()
+    //valider le bouton
+    private void ValiderBouton()
     {
-        
+        boutons[currentLigne].boutons[currentColonne].onClick.Invoke();
+    }
+
+    //faire descendre le curseur dans le menu
+    private void Descendre()
+    {
+        if(currentLigne < boutons.Count -1)
+        {
+            BackToNormalBouton();
+            currentLigne++;
+            HighlightCurrentBouton();
+        }
+    }
+
+    //faire monter le curseur dans le menu
+    private void Monter()
+    {
+        if(currentLigne > 0)
+        {
+            BackToNormalBouton();
+            currentLigne--;
+            HighlightCurrentBouton();
+        }
+    }
+
+    //faire passer le curseur sur la gauche
+    private void SlideGauche()
+    {
+        if(currentColonne > 0)
+        {
+            BackToNormalBouton();
+            currentColonne--;
+            HighlightCurrentBouton();
+        }
+    }
+
+    //faire passer le curseur sur la droite
+    private void SlideDroite()
+    {
+        if(currentColonne < boutons[currentLigne].boutons.Count - 1)
+        {
+            BackToNormalBouton();
+            currentColonne++;
+            HighlightCurrentBouton();
+        }
+    }
+
+    //mettre le bouton courant en surbrillance
+    private void HighlightCurrentBouton()
+    {
+        boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
+    }
+
+    //remettre un bouton à son état de base
+    private void BackToNormalBouton()
+    {
+        boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.normalColor;
+    }
+
+    public void testclic()
+    {
+        Debug.Log("Clic !");
     }
 }
