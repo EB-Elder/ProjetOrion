@@ -69,11 +69,19 @@
     <Compile Include="Assets\HUD&amp;GUI MEDIEVAL ART BUNDLE\Demo\Scripts\FillBySlider.cs" />
     <Compile Include="Assets\HUD&amp;GUI MEDIEVAL ART BUNDLE\Demo\Scripts\GathererLayout.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
-    <Compile Include="Assets\Scripts\ECS\GrenadeSpawnerSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\DataComponent\MovementData.cs" />
     <Compile Include="Assets\Scripts\ECS\PrefabEntityComponent.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\GrenadeSpawnerSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
@@ -99,6 +107,9 @@
     <Reference Include="Unity.Collections">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Scenes.Hybrid">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
     </Reference>
@@ -113,6 +124,9 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
@@ -132,6 +146,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Entities.Hybrid">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
     </Reference>
@@ -150,6 +167,9 @@
     <Reference Include="Unity.Transforms.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
@@ -161,24 +181,6 @@
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.CacheServer">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Searcher.Editor">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ScriptableBuildPipeline">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/2019.3.0f5/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
