@@ -27,4 +27,7 @@ public class PrefabEntityComponent : MonoBehaviour, IDeclareReferencedPrefabs, I
         //On y ajoute donc notre prefab au format gameObject
         referencedPrefabs.Add(prefabGameObject);
     }
+
+
+
 }

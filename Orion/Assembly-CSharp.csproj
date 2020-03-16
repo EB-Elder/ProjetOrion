@@ -69,9 +69,9 @@
     <Compile Include="Assets\HUD&amp;GUI MEDIEVAL ART BUNDLE\Demo\Scripts\FillBySlider.cs" />
     <Compile Include="Assets\HUD&amp;GUI MEDIEVAL ART BUNDLE\Demo\Scripts\GathererLayout.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
+    <Compile Include="Assets\Scripts\Boss\ActivateGlobalAttack.cs" />
     <Compile Include="Assets\Scripts\ECS\DataComponent\MovementData.cs" />
     <Compile Include="Assets\Scripts\ECS\PrefabEntityComponent.cs" />
-    <Compile Include="Assets\Scripts\ECS\Systems\GrenadeSpawnerSystem.cs" />
     <Compile Include="Assets\Scripts\ECS\Systems\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
