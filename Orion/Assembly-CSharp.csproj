@@ -70,9 +70,16 @@
     <Compile Include="Assets\HUD&amp;GUI MEDIEVAL ART BUNDLE\Demo\Scripts\GathererLayout.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Boss\ActivateGlobalAttack.cs" />
+    <Compile Include="Assets\Scripts\ECS\DataComponent\ExplosionTag.cs" />
+    <Compile Include="Assets\Scripts\ECS\DataComponent\GrenadeInfernaleTag.cs" />
     <Compile Include="Assets\Scripts\ECS\DataComponent\MovementData.cs" />
+    <Compile Include="Assets\Scripts\ECS\DataComponent\PlayerStatsData.cs" />
+    <Compile Include="Assets\Scripts\ECS\DataComponent\PlayerTag.cs" />
     <Compile Include="Assets\Scripts\ECS\PrefabEntityComponent.cs" />
-    <Compile Include="Assets\Scripts\ECS\Systems\MovementSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\ExplosionSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\GrenadeMovementSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\PlayerMovementSystem.cs" />
+    <Compile Include="Assets\Scripts\ECS\Systems\TriggerSystem.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -116,6 +123,9 @@
     <Reference Include="Unity.Scenes.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Physics">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -137,8 +147,14 @@
     <Reference Include="Unity.Rendering.Hybrid">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Physics.Hybrid">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Hybrid.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rendering.Hybrid.Editor">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
@@ -157,6 +173,9 @@
     </Reference>
     <Reference Include="Unity.Properties">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Physics.Editor">
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
@@ -360,10 +379,10 @@
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/2019.3.0f5/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/PackageCache/com.unity.burst@1.2.3/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/PackageCache/com.unity.burst@1.3.0-preview.7/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/PackageCache/com.unity.collections@0.6.0-preview.9/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/PackageCache/com.unity.collections@0.7.0-preview.2/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/2019.3.0f5/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

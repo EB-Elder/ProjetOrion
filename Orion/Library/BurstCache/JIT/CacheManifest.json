@@ -1,0 +1,84 @@
+{
+  "BurstVersion": "854e236d-9897-4b0c-9f20-9f8178656dde",
+  "Assemblies": [
+    {
+      "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\ProjetOrion\\Orion\\Library\\ScriptAssemblies\\Unity.Burst.dll",
+      "LastWriteTime": "2020-03-17T18:57:12.8013359Z"
+    },
+    {
+      "FullName": "netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\2019.3.0f5\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit\\Facades\\netstandard.dll",
+      "LastWriteTime": "2020-01-09T17:03:52Z"
+    },
+    {
+      "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\2019.3.0f5\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit\\mscorlib.dll",
+      "LastWriteTime": "2020-01-09T17:03:52Z"
+    },
+    {
+      "FullName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\2019.3.0f5\\Editor\\Data\\Managed\\UnityEngine\\UnityEngine.CoreModule.dll",
+      "LastWriteTime": "2020-01-09T17:12:58Z"
+    },
+    {
+      "FullName": "Unity.Physics.Hybrid, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\ProjetOrion\\Orion\\Library\\ScriptAssemblies\\Unity.Physics.Hybrid.dll",
+      "LastWriteTime": "2020-03-17T18:57:33.4644943Z"
+    },
+    {
+      "FullName": "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\2019.3.0f5\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit\\mscorlib.dll",
+      "LastWriteTime": "2020-01-09T17:03:52Z"
+    },
+    {
+      "FullName": "Unity.Physics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\ProjetOrion\\Orion\\Library\\ScriptAssemblies\\Unity.Physics.dll",
+      "LastWriteTime": "2020-03-17T18:57:29.6871527Z"
+    },
+    {
+      "FullName": "Unity.Mathematics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "FilePath": "C:\\Users\\picol\\OneDrive\\Documents\\Unity Projects\\ProjetOrion\\Orion\\Library\\ScriptAssemblies\\Unity.Mathematics.dll",
+      "LastWriteTime": "2020-03-17T18:57:14.876051Z"
+    }
+  ],
+  "Functions": [
+    {
+      "FullName": "System.Int32 Unity.Burst.Intrinsics.X86::DoGetCSRTrampoline()",
+      "ModuleOptionsHash": 10400676583197497630,
+      "ModuleHash": "0577355a111d145fef301f8794a999c5",
+      "LinkName": "CDCA4A5193BE5947",
+      "AssemblyDependencyIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Burst.Intrinsics.X86::DoSetCSRTrampoline(System.Int32)",
+      "ModuleOptionsHash": 10400676583197497630,
+      "ModuleHash": "dbc758c8399517bac674c63e94c2f394",
+      "LinkName": "801E9A000BB37B05",
+      "AssemblyDependencyIndices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobExtensions/JobStruct`1<Unity.Physics.Authoring.PhysicsShapeExtensions/BakeBoxJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 10400676583197497630,
+      "ModuleHash": "51f2309953b51e1754952021b1e14bfe",
+      "LinkName": "C78B4207A498E0AD",
+      "AssemblyDependencyIndices": [
+        3,
+        4,
+        5,
+        1,
+        2,
+        6,
+        7
+      ]
+    }
+  ]
+}
