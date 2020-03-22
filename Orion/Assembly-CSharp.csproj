@@ -85,6 +85,9 @@
     <Compile Include="Assets\Scripts\ECS\Systems\HitBossCollisionSystem.cs" />
     <Compile Include="Assets\Scripts\ECS\Systems\PlayerMovementSystem.cs" />
     <Compile Include="Assets\Scripts\ECS\Systems\TriggerSystem.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\EcranChoixMissions.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\EcranEquipementScript.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\EcranTitreInterfaceScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/picol/OneDrive/Documents/Unity Projects/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

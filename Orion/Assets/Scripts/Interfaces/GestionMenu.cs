@@ -11,15 +11,22 @@ public struct Ligne
     public List<Button> boutons;
 }
 
-public class GestionMenu : MonoBehaviour
+public abstract class GestionMenu : MonoBehaviour
 {
-    [SerializeField] List<Ligne> boutons;
-    [SerializeField] private int currentLigne;
-    [SerializeField] private int currentColonne;
+    [SerializeField] protected List<Ligne> boutons;
+    [SerializeField] protected int currentLigne;
+    [SerializeField] protected int currentColonne;
 
-    private PlayerControls gestionInput;
+    protected PlayerControls gestionInput;
+    protected bool verrou = false;
 
-    private void Awake()
+    protected void Awake()
+    {
+        InitialisationControlInput();
+    }
+
+    //initialisation du gestionnaire d'input
+    protected void InitialisationControlInput()
     {
         gestionInput = new PlayerControls();
 
@@ -27,7 +34,33 @@ public class GestionMenu : MonoBehaviour
         gestionInput.Menus.MoveUp.performed += ctx => Monter();
         gestionInput.Menus.MoveLeft.performed += ctx => SlideGauche();
         gestionInput.Menus.MoveRight.performed += ctx => SlideDroite();
-        gestionInput.Menus.Validate.performed += ctx => ValiderBouton();
+        
+    }
+
+    //rendre les boutons du menu interactibles
+    public void ActiverBoutons()
+    {
+        for (int i = 0; i < boutons.Count; i++)
+        {
+            for (int j = 0; j < boutons[i].boutons.Count; j++)
+            {
+                boutons[i].boutons[j].interactable = true;
+                boutons[i].boutons[j].gameObject.SetActive(true);
+            }
+        }
+    }
+
+    //rendre les boutons du menu non interactibles
+    public void DesactiverBoutons()
+    {
+        for (int i = 0; i < boutons.Count; i++)
+        {
+            for (int j = 0; j < boutons[i].boutons.Count; j++)
+            {
+                boutons[i].boutons[j].interactable = false;
+                boutons[i].boutons[j].gameObject.SetActive(false);
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -37,16 +70,11 @@ public class GestionMenu : MonoBehaviour
         gestionInput.Menus.Enable();
     }
 
-    //valider le bouton
-    private void ValiderBouton()
-    {
-        boutons[currentLigne].boutons[currentColonne].onClick.Invoke();
-    }
-
     //faire descendre le curseur dans le menu
-    private void Descendre()
+    protected void Descendre()
     {
-        if(currentLigne < boutons.Count -1)
+        if (boutons.Count == 0) return;
+        if (currentLigne < boutons.Count -1)
         {
             BackToNormalBouton();
             currentLigne++;
@@ -55,9 +83,10 @@ public class GestionMenu : MonoBehaviour
     }
 
     //faire monter le curseur dans le menu
-    private void Monter()
+    protected void Monter()
     {
-        if(currentLigne > 0)
+        if (boutons.Count == 0) return;
+        if (currentLigne > 0)
         {
             BackToNormalBouton();
             currentLigne--;
@@ -66,41 +95,48 @@ public class GestionMenu : MonoBehaviour
     }
 
     //faire passer le curseur sur la gauche
-    private void SlideGauche()
+    protected void SlideGauche()
     {
-        if(currentColonne > 0)
+        if (boutons.Count == 0) return;
+        if (currentColonne > 0 && verrou == false)
         {
             BackToNormalBouton();
             currentColonne--;
             HighlightCurrentBouton();
+            StartCoroutine(Verrou());
         }
     }
 
     //faire passer le curseur sur la droite
-    private void SlideDroite()
+    protected void SlideDroite()
     {
-        if(currentColonne < boutons[currentLigne].boutons.Count - 1)
+        if (boutons.Count == 0) return;
+        if(currentColonne < boutons[currentLigne].boutons.Count - 1 && verrou == false)
         {
             BackToNormalBouton();
             currentColonne++;
             HighlightCurrentBouton();
+            StartCoroutine(Verrou());
         }
     }
 
     //mettre le bouton courant en surbrillance
-    private void HighlightCurrentBouton()
+    protected void HighlightCurrentBouton()
     {
         boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
     }
 
     //remettre un bouton à son état de base
-    private void BackToNormalBouton()
+    protected void BackToNormalBouton()
     {
         boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.normalColor;
     }
 
-    public void testclic()
+    //coroutine pour éviter les superpositions d'input
+    public IEnumerator Verrou()
     {
-        Debug.Log("Clic !");
+        verrou = true;
+        yield return new WaitForSeconds(0.15f);
+        verrou = false;
     }
 }
