@@ -3,6 +3,7 @@ using Unity.Collections;
 using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Jobs;
+using UnityEngine;
 
 public class TriggerSystem : JobComponentSystem
 {
@@ -23,6 +24,7 @@ public class TriggerSystem : JobComponentSystem
             playerEntity = GetComponentDataFromEntity<PlayerStatsData>(),
             explosivEntities = GetComponentDataFromEntity<ExplosionTag>(),
             projectileEntities = GetComponentDataFromEntity<GrenadeInfernaleTag>(),
+            playerHit = GetComponentDataFromEntity<HitTag>(),
             commandBuffer = bufferSystem.CreateCommandBuffer()
 
         };
@@ -42,6 +44,9 @@ public class TriggerSystem : JobComponentSystem
 
         // Le composant qui sert à identifier les boules qui doivent exploser
         [ReadOnly] public ComponentDataFromEntity<ExplosionTag> explosivEntities;
+        
+        // Le composant qui sert à marque un joueur touché
+        [ReadOnly] public ComponentDataFromEntity<HitTag> playerHit;
 
         // Le composant qui va servire à vérifier qu'on entre bien en contacte avec une boule d'énergie générée par le boss
         [ReadOnly] public ComponentDataFromEntity<GrenadeInfernaleTag> projectileEntities;
@@ -52,6 +57,7 @@ public class TriggerSystem : JobComponentSystem
 
             TestEntityTrigger(triggerEvent.Entities.EntityA, triggerEvent.Entities.EntityB);
             TestEntityTrigger(triggerEvent.Entities.EntityB, triggerEvent.Entities.EntityA);
+            
 
         }
 
@@ -71,8 +77,16 @@ public class TriggerSystem : JobComponentSystem
                     {
                         return;
                     }
-                    commandBuffer.AddComponent(entity2, new ExplosionTag());
+
                     
+                    commandBuffer.AddComponent(entity2, new ExplosionTag());
+
+                    if (playerHit.HasComponent(entity1))
+                    {
+                        return;
+                    }
+
+                    commandBuffer.AddComponent(entity1, new HitTag());
 
                 }
 

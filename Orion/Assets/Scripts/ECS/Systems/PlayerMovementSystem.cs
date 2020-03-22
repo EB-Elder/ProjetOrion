@@ -8,6 +8,8 @@ using Unity.Mathematics;
 using Unity.Physics;
 
 [AlwaysSynchronizeSystem]
+//update après que le job TriggerSystem test les collisions entre le joueur et les projo 
+[UpdateAfter(typeof(HitBossCollisionSystem))]
 public class PlayerMovementSystem : JobComponentSystem
 {
 

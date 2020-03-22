@@ -7,5 +7,6 @@ public struct PlayerStatsData : IComponentData
 {
     public float movementSpeed;
     public int Health;
+    public bool hit;
 
 }
