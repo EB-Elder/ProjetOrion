@@ -22,17 +22,20 @@ public class EcranEquipementScript : GestionMenu
     {
         gestionInput.Menus.Cancel.performed += ctx => RetourChoixMissions();
         gestionInput.Menus.Enable();
+        actif = true;
     }
 
     //fonction de retour au menu de choix de mission
     private void RetourChoixMissions()
     {
-        if(verrou == false)
+        if(verrou == false && actif != false)
         {
+            actif = false;
             DesactiverBoutons();
             ecranChoixMissions.gameObject.SetActive(true);
             gameObject.SetActive(false);
             ecranChoixMissions.StartCoroutine(ecranChoixMissions.Verrou());
+            ecranChoixMissions.actif = true;
         }
     }
 }

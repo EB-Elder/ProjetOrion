@@ -19,6 +19,7 @@ public abstract class GestionMenu : MonoBehaviour
 
     protected PlayerControls gestionInput;
     protected bool verrou = false;
+    public bool actif;
 
     protected void Awake()
     {
@@ -73,7 +74,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire descendre le curseur dans le menu
     protected void Descendre()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentLigne < boutons.Count -1)
         {
             BackToNormalBouton();
@@ -85,7 +86,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire monter le curseur dans le menu
     protected void Monter()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentLigne > 0)
         {
             BackToNormalBouton();
@@ -97,7 +98,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire passer le curseur sur la gauche
     protected void SlideGauche()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentColonne > 0 && verrou == false)
         {
             BackToNormalBouton();
@@ -110,7 +111,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire passer le curseur sur la droite
     protected void SlideDroite()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if(currentColonne < boutons[currentLigne].boutons.Count - 1 && verrou == false)
         {
             BackToNormalBouton();

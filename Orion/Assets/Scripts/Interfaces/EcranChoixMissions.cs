@@ -42,6 +42,7 @@ public class EcranChoixMissions : GestionMenu
         boutons[0].boutons[0].onClick.AddListener(RetourEcranTitre);
         boutons[0].boutons[1].onClick.AddListener(LancerMission);
         boutons[0].boutons[2].onClick.AddListener(AfficherMenuEquipement);
+        actif = true;
     }
 
     //fonction pour revenir à l'écran titre
@@ -49,10 +50,12 @@ public class EcranChoixMissions : GestionMenu
     {
         if (boutons[currentLigne].boutons[currentColonne].gameObject.activeSelf == true && verrou == false)
         {
+            actif = false;
             DesactiverBoutons();
             ecranTitre.gameObject.SetActive(true);
             gameObject.SetActive(false);
             ecranTitre.StartCoroutine(ecranTitre.Verrou());
+            ecranTitre.actif = true;
         }
     }
 
@@ -62,6 +65,7 @@ public class EcranChoixMissions : GestionMenu
         if (boutons[currentLigne].boutons[currentColonne].gameObject.activeSelf == true && verrou == false)
         {
             DesactiverBoutons();
+            actif = false;
             interfaceJeu.gameObject.SetActive(false);
         }
     }
@@ -71,10 +75,12 @@ public class EcranChoixMissions : GestionMenu
     {
         if (boutons[currentLigne].boutons[currentColonne].gameObject.activeSelf == true)
         {
+            actif = false;
             DesactiverBoutons();
             ecranEquipement.gameObject.SetActive(true);
             gameObject.SetActive(false);
             ecranEquipement.StartCoroutine(Verrou());
+            ecranEquipement.actif = true;
         }
     }
 }

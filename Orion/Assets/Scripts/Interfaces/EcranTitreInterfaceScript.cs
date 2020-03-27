@@ -25,6 +25,7 @@ public class EcranTitreInterfaceScript : GestionMenu
 
         boutons[0].boutons[0].onClick.AddListener(AfficherMenuChoixMissions);
         boutons[1].boutons[0].onClick.AddListener(Quitter);
+        actif = true;
     }
 
     //clic sur le bouton jouer
@@ -32,10 +33,12 @@ public class EcranTitreInterfaceScript : GestionMenu
     {
         if(boutons[currentLigne].boutons[currentColonne].gameObject.activeSelf == true && verrou == false)
         {
+            actif = false;
             DesactiverBoutons();
             MenuChoixMissions.gameObject.SetActive(true);
             gameObject.SetActive(false);
             MenuChoixMissions.StartCoroutine(MenuChoixMissions.Verrou());
+            MenuChoixMissions.actif = true;
         }
     }
 
