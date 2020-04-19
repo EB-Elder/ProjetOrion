@@ -18,9 +18,15 @@ public class EcranChoixMissions : GestionMenu
     [SerializeField] private GestionMenu ecranTitre;
     [SerializeField] private GameObject interfaceJeu;
     [SerializeField] private GestionMenu ecranEquipement;
+    [SerializeField] private GameObject content;
+
+    [Header("Prefabs")]
+    [SerializeField] private GameObject prefabMission;
 
     [Header("Liste des missions")]
     [SerializeField] private List<Mission> listeDesMissions;
+
+    private bool missionsGenerees = false;
 
     private new void Awake()
     {
@@ -31,6 +37,23 @@ public class EcranChoixMissions : GestionMenu
     private void OnEnable()
     {
         ActiverBoutons();
+        ChargerMissions();
+    }
+
+    //charger les différentes missions dans la scroll view
+    private void ChargerMissions()
+    {
+        if (missionsGenerees) return;
+
+        foreach(var m in listeDesMissions)
+        {
+            GameObject g = Instantiate<GameObject>(prefabMission);
+            ScrollMissionScript scrollInfo = g.GetComponent<ScrollMissionScript>();
+            scrollInfo.setText(m.titreMission);
+            g.transform.SetParent(content.transform);
+        }
+
+        missionsGenerees = true;
     }
 
     // Start is called before the first frame update

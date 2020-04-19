@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Interfaces\EcranEquipementScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EcranTitreInterfaceScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ScrollMissionScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
