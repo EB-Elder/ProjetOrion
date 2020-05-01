@@ -7,21 +7,14 @@ public class EcranTitreInterfaceScript : GestionMenu
 {
     [SerializeField] private GestionMenu MenuChoixMissions;
 
-    private new void Awake()
-    {
-        InitialisationControlInput();
-        gestionInput.Menus.Validate.performed += ctx => boutons[currentLigne].boutons[currentColonne].onClick.Invoke();
-    }
-
     private void OnEnable()
     {
         ActiverBoutons();
     }
 
-    private new void Start()
+    private void Start()
     {
         boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
-        gestionInput.Menus.Enable();
 
         boutons[0].boutons[0].onClick.AddListener(AfficherMenuChoixMissions);
         boutons[1].boutons[0].onClick.AddListener(Quitter);
