@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 347557c1b6fe44ce4811e0fd5ee64a5c, type: 3}
   type: 0
+  nom: Casque de bronze
+  description: "Casque de base pour une protection mod\xE9r\xE9e"

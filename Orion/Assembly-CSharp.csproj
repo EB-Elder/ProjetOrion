@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Interfaces\ScrollRectGPScript.cs" />
     <Compile Include="Assets\Scripts\Inventaire\InventaireManagerScript.cs" />
     <Compile Include="Assets\Scripts\Inventaire\ItemScript.cs" />
+    <None Include="Assets\saveBuildPlayer.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

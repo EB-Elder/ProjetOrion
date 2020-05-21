@@ -5,7 +5,7 @@ using System;
 
 public class EcranTitreInterfaceScript : GestionMenu
 {
-    [SerializeField] private GestionMenu MenuChoixMissions;
+    [SerializeField] private EcranChoixMissions MenuChoixMissions;
 
     private void OnEnable()
     {
@@ -31,6 +31,7 @@ public class EcranTitreInterfaceScript : GestionMenu
             MenuChoixMissions.gameObject.SetActive(true);
             gameObject.SetActive(false);
             MenuChoixMissions.StartCoroutine(MenuChoixMissions.Verrou());
+            MenuChoixMissions.ChargerEquipement();
             MenuChoixMissions.actif = true;
         }
     }

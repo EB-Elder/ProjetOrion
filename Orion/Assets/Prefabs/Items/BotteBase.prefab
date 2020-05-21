@@ -45,3 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 877736b0e7db1480888f626ab7ee4505, type: 3}
   type: 4
+  nom: Bottes de cuir
+  description: "Bottes sans fioritures \xE0 la protection mitig\xE9e"
+  equip: 0

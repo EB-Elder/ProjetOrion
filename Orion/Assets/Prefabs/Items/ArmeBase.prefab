@@ -44,4 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: bf29a123e31d94f4cbca4451d1a9fe09, type: 3}
-  type: 3
+  type: 5
+  nom: Epee de bronze
+  description: "Une \xE9p\xE9e de qualit\xE9 discutable aux d\xE9g\xE2ts raisonnables
+    mais sans plus"

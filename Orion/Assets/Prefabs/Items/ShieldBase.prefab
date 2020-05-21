@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 42fd647b0588048d5b040a5a6a2e5212, type: 3}
   type: 2
+  nom: Bouclier de bronze
+  description: Bouclier simple en bois

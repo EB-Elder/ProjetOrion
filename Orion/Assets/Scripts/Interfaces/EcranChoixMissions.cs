@@ -19,7 +19,7 @@ public class EcranChoixMissions : GestionMenu
     [Header("Références")]
     [SerializeField] private GestionMenu ecranTitre;
     [SerializeField] private GameObject interfaceJeu;
-    [SerializeField] private GestionMenu ecranEquipement;
+    [SerializeField] private EcranEquipementScript ecranEquipement;
     [SerializeField] private GameObject content;
     [SerializeField] private Text descriptif;
     [SerializeField] private InventaireManagerScript inventaire;
@@ -69,13 +69,55 @@ public class EcranChoixMissions : GestionMenu
     }
 
     //charger les infos de l'inventaire dans les éléments de l'interface
-    private void ChargerEquipement()
+    public void ChargerEquipement()
     {
-        if (inventaire.GetTete() != null) tete.sprite = inventaire.GetTete().GetIcone();
-        if (inventaire.GetBuste() != null) buste.sprite = inventaire.GetBuste().GetIcone();
-        if (inventaire.GetMainGauche() != null) mainGauche.sprite = inventaire.GetMainGauche().GetIcone();
-        if (inventaire.GetMainDroite() != null) mainDroite.sprite = inventaire.GetMainDroite().GetIcone();
-        if (inventaire.GetBottes() != null) bottes.sprite = inventaire.GetBottes().GetIcone();
+        ecranEquipement.ChargerBuildFromFile();
+
+        if (inventaire.GetTete() != null)
+        {
+            tete.sprite = inventaire.GetTete().GetIcone();
+            tete.gameObject.SetActive(true);
+        }
+        else
+        {
+            tete.gameObject.SetActive(false);
+        }
+        if (inventaire.GetBuste() != null)
+        {
+            buste.sprite = inventaire.GetBuste().GetIcone();
+            buste.gameObject.SetActive(true);
+        }
+        else
+        {
+            buste.gameObject.SetActive(false);
+        }
+        if (inventaire.GetMainGauche() != null)
+        {
+            mainGauche.sprite = inventaire.GetMainGauche().GetIcone();
+            mainGauche.gameObject.SetActive(true);
+        }
+        else
+        {
+            mainGauche.gameObject.SetActive(false);
+        }
+        if (inventaire.GetMainDroite() != null)
+        {
+            mainDroite.sprite = inventaire.GetMainDroite().GetIcone();
+            mainDroite.gameObject.SetActive(true);
+        }
+        else
+        {
+            mainDroite.gameObject.SetActive(false);
+        }
+        if (inventaire.GetBottes() != null)
+        {
+            bottes.sprite = inventaire.GetBottes().GetIcone();
+            bottes.gameObject.SetActive(true);
+        }
+        else
+        {
+            bottes.gameObject.SetActive(false);
+        }
     }
 
     private void UpdateMission(int i)
@@ -111,9 +153,6 @@ public class EcranChoixMissions : GestionMenu
         boutons[0].boutons[1].onClick.AddListener(LancerMission);
         boutons[0].boutons[2].onClick.AddListener(AfficherMenuEquipement);
         actif = true;
-
-        //charger l'équipement du joueur
-        ChargerEquipement();
     }
 
     protected new void Update()
@@ -184,6 +223,8 @@ public class EcranChoixMissions : GestionMenu
             actif = false;
             DesactiverBoutons();
             ecranEquipement.gameObject.SetActive(true);
+            ecranEquipement.GenererItems();
+            ecranEquipement.ChargerEquipementCourant();
             gameObject.SetActive(false);
             ecranEquipement.StartCoroutine(Verrou());
             ecranEquipement.actif = true;

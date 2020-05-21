@@ -45,3 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 2fb4498960ba845e3b03abaf3daf0484, type: 3}
   type: 1
+  nom: Maille de bronze
+  description: "Une armure simple offrant une protection limit\xE9e"
