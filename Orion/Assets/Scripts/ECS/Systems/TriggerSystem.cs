@@ -55,6 +55,7 @@ public class TriggerSystem : JobComponentSystem
 
         public void Execute (TriggerEvent triggerEvent) {
 
+            
             TestEntityTrigger(triggerEvent.Entities.EntityA, triggerEvent.Entities.EntityB);
             TestEntityTrigger(triggerEvent.Entities.EntityB, triggerEvent.Entities.EntityA);
             
@@ -86,8 +87,8 @@ public class TriggerSystem : JobComponentSystem
                         return;
                     }
 
-                    commandBuffer.AddComponent(entity1, new HitTag());
-
+                    commandBuffer.AddComponent(entity1, new HitTag { damage = 50 });
+                    Debug.Log("Une grenade a explosé");
                 }
 
                 
