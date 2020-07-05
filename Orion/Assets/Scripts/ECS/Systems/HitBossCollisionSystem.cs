@@ -54,7 +54,7 @@ public class HitBossCollisionSystem : JobComponentSystem
 
         public void Execute(CollisionEvent collisionEvent)
         {
-            Debug.Log("on touche un truc");
+            
             TestEntityCollider(collisionEvent.Entities.EntityA, collisionEvent.Entities.EntityB);
             TestEntityCollider(collisionEvent.Entities.EntityB, collisionEvent.Entities.EntityA);
 
@@ -77,9 +77,8 @@ public class HitBossCollisionSystem : JobComponentSystem
                         return;
                     }
 
-                    commandBuffer.SetComponent(entity2, new DeadTag());
-
-
+                    commandBuffer.AddComponent(entity2, new HitTag { damage = 50 });
+                    Debug.Log("Boss touché ");
                 }
 
 

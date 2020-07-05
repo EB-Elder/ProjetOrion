@@ -10,7 +10,7 @@ using UnityEngine;
 public class ExplosionSystem : JobComponentSystem
 {
 
-    private bool explosion;
+    
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
         EntityCommandBuffer commandBuffer = new EntityCommandBuffer(Allocator.TempJob);
@@ -26,13 +26,26 @@ public class ExplosionSystem : JobComponentSystem
         Entities.ForEach((Entity e, ref PlayerStatsData playerStatsData, ref HitTag hitTag) =>
         {
 
-            playerStatsData.Health = playerStatsData.Health - 50;
-            
-
-
+            playerStatsData.Health = playerStatsData.Health - hitTag.damage;
             commandBuffer.RemoveComponent<HitTag>(e);
 
             if (playerStatsData.Health <= 0)
+            {
+                commandBuffer.AddComponent(e, new DeadTag());
+
+            }
+
+
+
+        }).Run();
+
+        Entities.ForEach((Entity e, ref BossStats bossStatsData, ref HitTag hitTag) =>
+        {
+
+            bossStatsData.health = bossStatsData.health - hitTag.damage;
+            commandBuffer.RemoveComponent<HitTag>(e);
+
+            if (bossStatsData.health <= 0)
             {
                 commandBuffer.AddComponent(e, new DeadTag());
 

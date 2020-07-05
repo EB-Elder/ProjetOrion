@@ -340,68 +340,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81cabd7661537413ca1d22a9097cd62b, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &288193970
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288193967}
-  m_CullTransparentMesh: 0
---- !u!1 &306468121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 306468122}
-  - component: {fileID: 306468124}
-  - component: {fileID: 306468123}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &306468122
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306468121}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 461045166}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -94}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &306468123
+  m_ShapeType: 0
+  m_PrimitiveCenter:
+    x: 0
+    y: 0
+    z: 0
+  m_PrimitiveSize:
+    x: 1
+    y: 1
+    z: 1
+  m_PrimitiveOrientation:
+    Value:
+      x: -0
+      y: 0
+      z: 0
+    RotationOrder: 4
+  m_Capsule:
+    Height: 1
+    Radius: 0.5
+    Axis: 2
+  m_Cylinder:
+    Height: 1
+    Radius: 0.5
+    Axis: 2
+  m_CylinderSideCount: 20
+  m_SphereRadius: 0.5
+  m_MinimumSkinnedVertexWeight: 0.1
+  m_ConvexHullGenerationParameters:
+    m_SimplificationTolerance: 0.015
+    m_BevelRadius: 0
+    m_MinimumAngle: 2.5000002
+  m_CustomMesh: {fileID: 0}
+  m_ForceUnique: 0
+  m_Material:
+    m_SupportsTemplate: 1
+    m_Template: {fileID: 0}
+    m_IsTrigger:
+      m_Override: 0
+      m_Value: 0
+    m_Friction:
+      m_Override: 0
+      m_Value:
+        Value: 0.5
+        CombineMode: 0
+    m_Restitution:
+      m_Override: 0
+      m_Value:
+        Value: 0
+        CombineMode: 2
+    m_BelongsTo:
+      m_Override: 0
+      m_Value: 0101010101010101010101010101010101010101010101010101010101010101
+    m_CollidesWith:
+      m_Override: 0
+      m_Value: 0101010101010101010101010101010101010101010101010101010101010101
+    m_RaisesCollisionEvents:
+      m_Override: 0
+      m_Value: 1
+    m_CustomTags:
+      m_Override: 0
+      m_Value: 0000000000000000
+  m_ConvexRadius_Deprecated: -1
+--- !u!114 &633176563
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2853,7 +2853,7 @@ MonoBehaviour:
       m_Value: 0101010101010101010101010101010101010101010101010101010101010101
     m_RaisesCollisionEvents:
       m_Override: 0
-      m_Value: 0
+      m_Value: 1
     m_CustomTags:
       m_Override: 0
       m_Value: 0000000000000000
