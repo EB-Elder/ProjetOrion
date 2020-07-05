@@ -27,6 +27,9 @@ public class ExplosionSystem : JobComponentSystem
         {
 
             playerStatsData.Health = playerStatsData.Health - 50;
+            
+
+
             commandBuffer.RemoveComponent<HitTag>(e);
 
             if (playerStatsData.Health <= 0)

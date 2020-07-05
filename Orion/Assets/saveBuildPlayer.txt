@@ -1,5 +1,5 @@
-head:-1
-chest:-1
-handG:-1
-handD:-1
-feets:-1
+head:2
+chest:1
+handG:3
+handD:4
+feets:0

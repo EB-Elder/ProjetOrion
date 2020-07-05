@@ -87,130 +87,131 @@
     <Compile Include="Assets\Scripts\Interfaces\EcranEquipementScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\EcranTitreInterfaceScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\InGameInterfaceScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\ScrollMissionScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\ScrollRectGPScript.cs" />
     <Compile Include="Assets\Scripts\Inventaire\InventaireManagerScript.cs" />
     <Compile Include="Assets\Scripts\Inventaire\ItemScript.cs" />
     <None Include="Assets\saveBuildPlayer.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.CacheServer">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Properties">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Jobs">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Jobs.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Collections">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InputSystem">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Scenes.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Physics">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Extensions.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rendering.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Physics.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rendering.Hybrid.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rendering.Hybrid.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.BuildUtils">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Properties">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Physics.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Physics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ScriptableBuildPipeline">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Transforms.Hybrid">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f5/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -390,10 +391,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f5/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/PackageCache/com.unity.burst@1.3.0-preview.7/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/PackageCache/com.unity.burst@1.3.0-preview.7/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>C:/Projet Annuel/Orion/ProjetOrion/Orion/Library/PackageCache/com.unity.collections@0.7.0-preview.2/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>C:/Projet_Annuel/Orion/ProjetOrion/Orion/Library/PackageCache/com.unity.collections@0.7.0-preview.2/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f5/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

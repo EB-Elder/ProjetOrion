@@ -20,9 +20,11 @@ public class EcranChoixMissions : GestionMenu
     [SerializeField] private GestionMenu ecranTitre;
     [SerializeField] private GameObject interfaceJeu;
     [SerializeField] private EcranEquipementScript ecranEquipement;
+    [SerializeField] private InGameInterfaceScript ingameInterface;
     [SerializeField] private GameObject content;
     [SerializeField] private Text descriptif;
     [SerializeField] private InventaireManagerScript inventaire;
+    [SerializeField] private GameObject background;
 
     [Header("Prefabs")]
     [SerializeField] private GameObject prefabMission;
@@ -211,7 +213,9 @@ public class EcranChoixMissions : GestionMenu
         {
             DesactiverBoutons();
             actif = false;
-            interfaceJeu.gameObject.SetActive(false);
+            ingameInterface.gameObject.SetActive(true);
+            background.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 
