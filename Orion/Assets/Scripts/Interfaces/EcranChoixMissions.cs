@@ -9,6 +9,7 @@ public struct Mission
 {
     public GameObject boss;
     public GameObject decor;
+    public int pvBoss;
     public string titreMission;
     public string descriptifMission;
     public Sprite icone;
@@ -214,6 +215,7 @@ public class EcranChoixMissions : GestionMenu
             DesactiverBoutons();
             actif = false;
             ingameInterface.gameObject.SetActive(true);
+            ingameInterface.LancerMission(listeDesMissions[index].boss, listeDesMissions[index].pvBoss);
             background.SetActive(false);
             gameObject.SetActive(false);
         }

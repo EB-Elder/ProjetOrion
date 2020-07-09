@@ -6,7 +6,7 @@ using UnityEngine;
 
 [AlwaysSynchronizeSystem]
 //update après que le job TriggerSystem test les collisions entre le joueur et les projo 
-[UpdateAfter(typeof(TriggerSystem))]
+//[UpdateAfter(typeof(TriggerSystem))]
 public class ExplosionSystem : JobComponentSystem
 {
 

@@ -1,4 +1,4 @@
-﻿using Unity.Entities;
+﻿/*using Unity.Entities;
 using Unity.Collections;
 using Unity.Physics;
 using Unity.Physics.Systems;
@@ -96,4 +96,4 @@ public class TriggerSystem : JobComponentSystem
         }
 
     }
-}
+}*/

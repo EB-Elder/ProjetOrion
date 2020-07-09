@@ -9,10 +9,9 @@ using Unity.Physics;
 
 [AlwaysSynchronizeSystem]
 //update après que le job TriggerSystem test les collisions entre le joueur et les projo 
-[UpdateAfter(typeof(HitBossCollisionSystem))]
+//[UpdateAfter(typeof(HitBossCollisionSystem))]
 public class PlayerMovementSystem : JobComponentSystem
 {
-
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
 
@@ -29,7 +28,7 @@ public class PlayerMovementSystem : JobComponentSystem
 
             // La variable qui va contenir la nouvelle position du joueur
             float2 newVel = vel.Linear.xz;
-
+            
             newVel += curInput * playerStatsData.movementSpeed * deltaTime;
 
 

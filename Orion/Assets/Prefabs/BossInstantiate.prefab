@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7624436899025362910}
   - component: {fileID: 7624436899025362909}
   - component: {fileID: 7624436899025362908}
-  - component: {fileID: 7624436899025362906}
+  - component: {fileID: 8559078045239186094}
   m_Layer: 0
   m_Name: BossInstantiate
   m_TagString: Untagged
@@ -164,7 +164,7 @@ MonoBehaviour:
       m_Value: 0101010101010101010101010101010101010101010101010101010101010101
     m_RaisesCollisionEvents:
       m_Override: 0
-      m_Value: 0
+      m_Value: 1
     m_CustomTags:
       m_Override: 0
       m_Value: 0000000000000000
@@ -218,7 +218,7 @@ MonoBehaviour:
     Tag05: 0
     Tag06: 0
     Tag07: 0
---- !u!114 &7624436899025362906
+--- !u!114 &8559078045239186094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,4 +230,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e83f2e6a4b6cd1e4b80b8187ec1d17a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
