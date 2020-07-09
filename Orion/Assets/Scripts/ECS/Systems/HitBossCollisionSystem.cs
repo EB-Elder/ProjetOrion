@@ -4,8 +4,9 @@ using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Jobs;
 using UnityEngine;
+using Unity.Burst;
 
-/*public class HitBossCollisionSystem : JobComponentSystem
+public class HitBossCollisionSystem : JobComponentSystem
 {
 
     private BeginInitializationEntityCommandBufferSystem bufferSystem;
@@ -19,6 +20,7 @@ using UnityEngine;
         stepPhysicsWorld = World.GetOrCreateSystem<StepPhysicsWorld>();
     }
 
+    [BurstCompile]
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {     
         HittingBossJob hittingBossJob = new HittingBossJob
@@ -46,10 +48,11 @@ using UnityEngine;
 
         public EntityCommandBuffer commandBuffer;
         
+        [BurstCompile]
         public void Execute(CollisionEvent collisionEvent)
         {
             TestEntityCollider(collisionEvent.Entities.EntityA, collisionEvent.Entities.EntityB);
-            //TestEntityCollider(collisionEvent.Entities.EntityB, collisionEvent.Entities.EntityA);
+            TestEntityCollider(collisionEvent.Entities.EntityB, collisionEvent.Entities.EntityA);
         }
 
         // On test si c'est bien un joueur qui entre en collision avec le boss
@@ -73,4 +76,4 @@ using UnityEngine;
             }
         }
     }
-}*/
+}

@@ -4,8 +4,9 @@ using UnityEngine;
 using Unity.Transforms;
 using Unity.Entities;
 using UnityEngine.UI;
+using Unity.Physics;
 
-[AddComponentMenu("DOTS Samples/SpawnFromMonoBehaviour/Spawner")]
+//[AddComponentMenu("DOTS Samples/SpawnFromMonoBehaviour/Spawner")]
 public class InGameInterfaceScript : MonoBehaviour
 {
     [Header("Références")]
@@ -33,24 +34,26 @@ public class InGameInterfaceScript : MonoBehaviour
         eManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
         boss = eManager.Instantiate(convert);
+        eManager.SetName(boss, "Boss");
         Vector3 pos = new Vector3(0, 1.7f, 0);
         eManager.SetComponentData(boss, new BossStats { health = pvBoss });
         eManager.SetComponentData(boss, new Translation { Value = pos });
 
         bossBar.maxValue = pvBoss;
 
-        //instancier le joueur en Entity
-        /*var convertP = GameObjectConversionUtility.ConvertGameObjectHierarchy(playerGO, settings);
-        eManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        EntityQuery query = eManager.CreateEntityQuery(ComponentType.ReadOnly<PlayerTag>());
+        var res = query.ToEntityArray(Unity.Collections.Allocator.TempJob);
 
-        joueur = eManager.Instantiate(convertP);
-        Vector3 posP = new Vector3(-2, 1.5f, 0);
-        eManager.SetComponentData(joueur, new Translation { Value = posP });
-        eManager.SetComponentData(joueur, new PlayerTag { });
-        eManager.SetComponentData(joueur, new PlayerStatsData { Health = 200, movementSpeed = 100, hit = false });*/
-
+        if(res.Length != 0)
+        {
+            eManager.SetComponentData<PhysicsVelocity>(res[0], new PhysicsVelocity { Linear = new Unity.Mathematics.float3(0.0f, 0.0f, 0.0f), Angular = new Unity.Mathematics.float3(0.0f, 0.0f, 0.0f) });
+            eManager.SetComponentData<Translation>(res[0], new Translation { Value = new Unity.Mathematics.float3(0, 1, -7)} );
+            eManager.SetComponentData<PlayerStatsData>(res[0], new PlayerStatsData { Health = 100, hit = false, movementSpeed = 60, rotationSpeed = 5 });
+            joueur = res[0];
+        }
 
         enMission = true;
+        res.Dispose();
     }
 
     private void OnDestroy()
@@ -83,11 +86,11 @@ public class InGameInterfaceScript : MonoBehaviour
         }
 
         //mise à jour des PV du joueur
-        /*var currentPlayerHp = eManager.GetComponentData<PlayerStatsData>(joueur).Health;
+        var currentPlayerHp = eManager.GetComponentData<PlayerStatsData>(joueur).Health;
 
         if (currentPlayerHp != hpBar.value)
         {
             UpdateHPJoueur(currentPlayerHp);
-        }*/
+        }
     }
 }
