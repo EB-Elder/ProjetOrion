@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\Interfaces\EcranTitreInterfaceScript.cs" />
      <Compile Include="Assets\Scripts\Interfaces\GestionMenu.cs" />
      <Compile Include="Assets\Scripts\Python\PythonInterfacer.cs" />
+     <None Include="Assets\Scripts\Python\QLearning\QTable\test.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>F:/Projet Orion/Orion/ProjetOrion/Orion/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
