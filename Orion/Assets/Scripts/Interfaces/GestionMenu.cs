@@ -17,24 +17,35 @@ public abstract class GestionMenu : MonoBehaviour
     [SerializeField] protected int currentLigne;
     [SerializeField] protected int currentColonne;
 
-    protected PlayerControls gestionInput;
     protected bool verrou = false;
+    public bool actif;
 
-    protected void Awake()
+    protected void Update()
     {
-        InitialisationControlInput();
-    }
+        if (Input.GetButtonDown("A"))
+        {
+            boutons[currentLigne].boutons[currentColonne].onClick.Invoke();
+        }
 
-    //initialisation du gestionnaire d'input
-    protected void InitialisationControlInput()
-    {
-        gestionInput = new PlayerControls();
+        if (Input.GetAxis("LeftJoystickX") > 0.2f && Input.GetAxis("LeftJoystickX") != 0f)
+        {
+            SlideDroite();
+        }
 
-        gestionInput.Menus.MoveDown.performed += ctx => Descendre();
-        gestionInput.Menus.MoveUp.performed += ctx => Monter();
-        gestionInput.Menus.MoveLeft.performed += ctx => SlideGauche();
-        gestionInput.Menus.MoveRight.performed += ctx => SlideDroite();
-        
+        if (Input.GetAxis("LeftJoystickX") < -0.2f && Input.GetAxis("LeftJoystickX") != 0f)
+        {
+            SlideGauche();
+        }
+
+        if (Input.GetAxis("LeftJoystickY") < -0.2f && Input.GetAxis("LeftJoystickY") != 0f)
+        {
+            Monter();
+        }
+
+        if (Input.GetAxis("LeftJoystickY") > 0.2f && Input.GetAxis("LeftJoystickY") != 0f)
+        {
+            Descendre();
+        }
     }
 
     //rendre les boutons du menu interactibles
@@ -67,13 +78,12 @@ public abstract class GestionMenu : MonoBehaviour
     void Start()
     {
         boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
-        gestionInput.Menus.Enable();
     }
 
     //faire descendre le curseur dans le menu
     protected void Descendre()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentLigne < boutons.Count -1)
         {
             BackToNormalBouton();
@@ -85,7 +95,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire monter le curseur dans le menu
     protected void Monter()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentLigne > 0)
         {
             BackToNormalBouton();
@@ -97,7 +107,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire passer le curseur sur la gauche
     protected void SlideGauche()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if (currentColonne > 0 && verrou == false)
         {
             BackToNormalBouton();
@@ -110,7 +120,7 @@ public abstract class GestionMenu : MonoBehaviour
     //faire passer le curseur sur la droite
     protected void SlideDroite()
     {
-        if (boutons.Count == 0) return;
+        if (boutons.Count == 0 || actif == false) return;
         if(currentColonne < boutons[currentLigne].boutons.Count - 1 && verrou == false)
         {
             BackToNormalBouton();
