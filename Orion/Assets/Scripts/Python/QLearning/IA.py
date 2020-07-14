@@ -2,10 +2,6 @@ import json
 import random
 from threading import Thread
 
-start_q_table = "QTable/test.txt"
-f = open(start_q_table, "r")
-q_table = json.loads(f.read())
-q_table = eval(q_table)
 threshold = 0.5
 
 #TODO: Reading file with MultiThreading
@@ -18,7 +14,7 @@ class Lecteur(Thread):
         self.startingCharacter = startingCharacter
         self.endingCharacter = endingCharacter
 
-    def run(self):
+    def run(self, filestream):
         pass
 
 class IA:
@@ -39,6 +35,12 @@ class IA:
                 return "-1, 1"
             elif action == 3:
                 return "1, -1"
+
+
+start_q_table = "QTable/test.txt"
+f = open(start_q_table, "r")
+q_table = json.loads(f.read())
+q_table = eval(q_table)
 
 # Test = IA()
 # player = [8, 8]

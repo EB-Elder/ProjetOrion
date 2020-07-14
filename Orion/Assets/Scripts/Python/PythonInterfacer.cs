@@ -4,8 +4,8 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using IronPython.Modules;
 using Microsoft.Scripting.Utils;
+using Unity.Entities;
 using UnityEngine;
-using Random = System.Random;
 
 namespace Python
 {
@@ -13,6 +13,7 @@ namespace Python
     {
         private dynamic IA;
         private float timeCounter;
+        private EntityManager _eManager = World.DefaultGameObjectInjectionWorld.EntityManager;
         public Transform playerTransform;
         public Transform foodTransform;
         public Transform enemyTransform;
@@ -23,6 +24,8 @@ namespace Python
         public int lastStepY = 0;
         
             void Start () {
+                
+                
             var engine = IronPython.Hosting.Python.CreateEngine();
 
             ICollection<string> searchPaths = engine.GetSearchPaths();
