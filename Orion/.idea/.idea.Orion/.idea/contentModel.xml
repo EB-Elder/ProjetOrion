@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\EB-El\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\EB-El\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Orion.-1474804420.00" t="ExcludeRecursive" />
+    <e p="F:\Projet Orion\ProjetOrion\Orion" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="HUD&amp;GUI MEDIEVAL ART BUNDLE" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ButtonDisabler.cs" t="Include" />
+              <e p="ButtonImageOnClick.cs" t="Include" />
+              <e p="CastAnimationButton.cs" t="Include" />
+              <e p="FillBySlider.cs" t="Include" />
+              <e p="GathererLayout.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PlayerControls.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Boss" t="Include">
+            <e p="ActivateGlobalAttack.cs" t="Include" />
+          </e>
+          <e p="ECS" t="Include">
+            <e p="DataComponent" t="Include">
+              <e p="BossStats.cs" t="Include" />
+              <e p="DeadTag.cs" t="Include" />
+              <e p="ExplosionTag.cs" t="Include" />
+              <e p="GrenadeInfernaleTag.cs" t="Include" />
+              <e p="HitTag.cs" t="Include" />
+              <e p="MovementData.cs" t="Include" />
+              <e p="PlayerStatsData.cs" t="Include" />
+              <e p="PlayerTag.cs" t="Include" />
+            </e>
+            <e p="PrefabEntityComponent.cs" t="Include" />
+            <e p="Systems" t="Include">
+              <e p="ActivateGlobalAttackSystem.cs" t="Include" />
+              <e p="ExplosionSystem.cs" t="Include" />
+              <e p="GrenadeMovementSystem.cs" t="Include" />
+              <e p="HitBossCollisionSystem.cs" t="Include" />
+              <e p="IA" t="Include">
+                <e p="Movement.cs" t="Include" />
+              </e>
+              <e p="PlayerMovementSystem.cs" t="Include" />
+              <e p="TriggerSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="EcranChoixMissions.cs" t="Include" />
+            <e p="EcranEquipementScript.cs" t="Include" />
+            <e p="EcranTitreInterfaceScript.cs" t="Include" />
+            <e p="GestionMenu.cs" t="Include" />
+          </e>
+          <e p="Python" t="Include">
+            <e p="PythonInterfacer.cs" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="shaderController.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Orion.sln" t="IncludeFlat" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
