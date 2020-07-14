@@ -21,7 +21,6 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-/[Ll]ibrary/
 x64/
 x86/
 [Aa][Rr][Mm]/
@@ -31,6 +30,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+[Ll]ibrary/
+/[Ll]ibrary/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -416,5 +417,3 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
-
-Orion/Library/

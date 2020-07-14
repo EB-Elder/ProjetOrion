@@ -5,26 +5,20 @@ using System;
 
 public class EcranTitreInterfaceScript : GestionMenu
 {
-    [SerializeField] private GestionMenu MenuChoixMissions;
-
-    private new void Awake()
-    {
-        InitialisationControlInput();
-        gestionInput.Menus.Validate.performed += ctx => boutons[currentLigne].boutons[currentColonne].onClick.Invoke();
-    }
+    [SerializeField] private EcranChoixMissions MenuChoixMissions;
 
     private void OnEnable()
     {
         ActiverBoutons();
     }
 
-    private new void Start()
+    private void Start()
     {
         boutons[currentLigne].boutons[currentColonne].image.color = boutons[currentLigne].boutons[currentColonne].colors.highlightedColor;
-        gestionInput.Menus.Enable();
 
         boutons[0].boutons[0].onClick.AddListener(AfficherMenuChoixMissions);
         boutons[1].boutons[0].onClick.AddListener(Quitter);
+        actif = true;
     }
 
     //clic sur le bouton jouer
@@ -32,10 +26,13 @@ public class EcranTitreInterfaceScript : GestionMenu
     {
         if(boutons[currentLigne].boutons[currentColonne].gameObject.activeSelf == true && verrou == false)
         {
+            actif = false;
             DesactiverBoutons();
             MenuChoixMissions.gameObject.SetActive(true);
             gameObject.SetActive(false);
             MenuChoixMissions.StartCoroutine(MenuChoixMissions.Verrou());
+            MenuChoixMissions.ChargerEquipement();
+            MenuChoixMissions.actif = true;
         }
     }
 
