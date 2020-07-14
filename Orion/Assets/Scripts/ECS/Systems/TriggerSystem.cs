@@ -29,6 +29,7 @@ public class TriggerSystem : JobComponentSystem
             explosivEntities = GetComponentDataFromEntity<ExplosionTag>(),
             projectileEntities = GetComponentDataFromEntity<GrenadeInfernaleTag>(),
             playerHit = GetComponentDataFromEntity<HitTag>(),
+            forceShield = GetComponentDataFromEntity<ForceShieldTag>(),
             commandBuffer = bufferSystem.CreateCommandBuffer()
 
         };
@@ -51,6 +52,9 @@ public class TriggerSystem : JobComponentSystem
         
         // Le composant qui sert à marque un joueur touché
         [ReadOnly] public ComponentDataFromEntity<HitTag> playerHit;
+
+        // Le composant qui sert à indiquer que le forceshield est actif
+        [ReadOnly] public ComponentDataFromEntity<ForceShieldTag> forceShield;
 
         // Le composant qui va servire à vérifier qu'on entre bien en contacte avec une boule d'énergie générée par le boss
         [ReadOnly] public ComponentDataFromEntity<GrenadeInfernaleTag> projectileEntities;
@@ -96,13 +100,14 @@ public class TriggerSystem : JobComponentSystem
                         return;
                     }
 
-                    commandBuffer.AddComponent(entity1, new HitTag { damage = 50 });
+                    if(!forceShield.HasComponent(entity1))
+                    {
+                        commandBuffer.AddComponent(entity1, new HitTag { damage = 50 });
+                    }
+                    
                     Debug.Log("Une grenade a explosé");
                 }
-
-                
             }
         }
-
     }
 }

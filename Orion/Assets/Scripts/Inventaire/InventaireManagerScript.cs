@@ -115,13 +115,36 @@ public class InventaireManagerScript : MonoBehaviour
         return listeEquipDispo;
     }
 
+    public int GetNbAllItem()
+    {
+        return listeAllEquip.Count;
+    }
+
     public int GetIndiceItem(int i)
     {
         return listeEquipDispo[i];
     }
 
+    public void AjoutItem(int i)
+    {
+        listeEquipDispo.Add(i);
+    }
+
     public ItemScript GetItemScriptFromEquipDispo(int i)
     {
         return GetItemInList(listeEquipDispo[i]);
+    }
+
+    public void ChargerListItemDispo(List<string> itemInfos)
+    {
+        listeEquipDispo.Clear();
+
+        for(int i = 1; i < itemInfos.Count; i++)
+        {
+            if(itemInfos[i] != "")
+            {
+                listeEquipDispo.Add(int.Parse(itemInfos[i]));
+            }
+        }
     }
 }

@@ -53,6 +53,7 @@ public class EcranEquipementScript : GestionMenu
     public void GenererItems()
     {
         var listeEquip = inventaire.GetListeEquipDispo();
+        equipementDispoInfos.Clear();
 
         foreach(int i in listeEquip)
         {
@@ -350,7 +351,7 @@ public class EcranEquipementScript : GestionMenu
     }
 
     //fonction de sauvegarde de l'équipement du joueur
-    private void SauvegardeBuildJoueur()
+    public void SauvegardeBuildJoueur()
     {
         //création du fichier de sauvegarde dans le dossier Asset
         var writer = File.CreateText(Application.dataPath.ToString() + "/saveBuildPlayer.txt");
@@ -361,6 +362,16 @@ public class EcranEquipementScript : GestionMenu
         writer.WriteLine("handG:" + inventaire.GetIndiceMainG());
         writer.WriteLine("handD:" + inventaire.GetIndiceMainD());
         writer.WriteLine("feets:" + inventaire.GetIndiceBottes());
+
+        string itemsDispo = "dispo:";
+
+        foreach (var i in inventaire.GetListeEquipDispo())
+        {
+            itemsDispo += i + ":";
+        }
+
+        itemsDispo.Substring(0, itemsDispo.Length - 1);
+        writer.WriteLine(itemsDispo);
 
         writer.Close();
     }
@@ -398,6 +409,10 @@ public class EcranEquipementScript : GestionMenu
 
                     case "feets":
                         inventaire.SetBottes(int.Parse(itemInfo[1]));
+                        break;
+
+                    case "dispo":
+                        inventaire.ChargerListItemDispo(itemInfo);
                         break;
                 }
             }

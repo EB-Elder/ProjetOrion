@@ -18,6 +18,7 @@ public class ItemScript : MonoBehaviour
     [SerializeField] private TypeEquip type;
     [SerializeField] private string nom;
     [SerializeField] private string description;
+    [SerializeField] public Competences skill;
 
     [SerializeField]
     private bool equip = false;

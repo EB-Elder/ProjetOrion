@@ -22,6 +22,7 @@ public class ExplosionSystem : JobComponentSystem
 
         Entities.ForEach((Entity e, ref PlayerStatsData playerStatsData, ref HitTag hitTag) =>
         {
+            
             playerStatsData.Health = playerStatsData.Health - hitTag.damage;
             commandBuffer.RemoveComponent<HitTag>(e);
 

@@ -1,5 +1,6 @@
 head:2
-chest:1
+chest:5
 handG:3
 handD:4
 feets:0
+dispo:0:1:2:3:4:5:

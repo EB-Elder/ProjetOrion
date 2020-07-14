@@ -28,8 +28,7 @@ public class ActivateGlobalAttackSystem : ComponentSystem
                 EntityManager.SetComponentData(spawnedEntity, new Translation { Value = position });
                 EntityManager.SetComponentData(spawnedEntity, new MovementData { startPosition = position, movementSpeed = 4, up = UnityEngine.KeyCode.Z, goingUp = true });
             }
-            
-            
+            random = new Random((uint)random.NextInt(1, 5000));
 
         }
 
