@@ -37,7 +37,7 @@ class IA:
                 return "1, -1"
 
 
-start_q_table = "QTable/test.txt"
+start_q_table = "./QTable/test.txt"
 f = open(start_q_table, "r")
 q_table = json.loads(f.read())
 q_table = eval(q_table)

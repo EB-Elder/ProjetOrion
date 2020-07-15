@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5919493378804908386}
   - component: {fileID: -2474131589108162048}
   - component: {fileID: 6943742081062435656}
-  - component: {fileID: 8003803888510347177}
-  - component: {fileID: 6352898798330974240}
+  - component: {fileID: 6284683230202933670}
+  - component: {fileID: 7371424308326352961}
   m_Layer: 0
   m_Name: GrenadeInfernaleGO
   m_TagString: Untagged
@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Override: 0
       m_Value: 0000000000000000
   m_ConvexRadius_Deprecated: -1
---- !u!114 &5715577544273531051
+--- !u!114 &6284683230202933670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -214,19 +214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6195100879612670003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc1173fbbf6fb74f9d184a05498d0f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6352898798330974240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6195100879612670003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d071f6646f9631d4d974ba5b08097562, type: 3}
+  m_Script: {fileID: 11500000, guid: baea662ca784a064ba8328958d0fe93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
@@ -238,3 +226,15 @@ MonoBehaviour:
   goingUp: 0
   goingDown: 0
   up: 0
+--- !u!114 &7371424308326352961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6195100879612670003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0115da2d701aa54f98639c68c96488c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

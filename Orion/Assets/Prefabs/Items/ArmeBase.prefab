@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532210034386547443}
-  - component: {fileID: 3203923478459493611}
+  - component: {fileID: 383912062028140938}
   m_Layer: 0
   m_Name: ArmeBase
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3203923478459493611
+--- !u!114 &383912062028140938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,11 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3782031849465429341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149c108ca2cb83f4e8f269c360a377e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b10a324d397dcf4c80f8d531e71f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: bf29a123e31d94f4cbca4451d1a9fe09, type: 3}
-  type: 5
-  nom: Epee de bronze
-  description: "Une \xE9p\xE9e de qualit\xE9 discutable aux d\xE9g\xE2ts raisonnables
-    mais sans plus"
+  itemSprite: {fileID: 21300000, guid: 19dcdeb6caff0aa47a7c17832e131b5a, type: 3}
+  type: 3
+  nom: "\xE9p\xE9e en bronze"
+  description: "\xE9p\xE9e simple"
+  skill: 0
+  equip: 0

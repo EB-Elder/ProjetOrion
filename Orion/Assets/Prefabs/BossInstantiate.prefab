@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7624436899025362910}
   - component: {fileID: 7624436899025362909}
   - component: {fileID: 7624436899025362908}
-  - component: {fileID: 8559078045239186094}
+  - component: {fileID: 292792231582240417}
   m_Layer: 0
   m_Name: BossInstantiate
   m_TagString: Untagged
@@ -218,7 +218,7 @@ MonoBehaviour:
     Tag05: 0
     Tag06: 0
     Tag07: 0
---- !u!114 &8559078045239186094
+--- !u!114 &292792231582240417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7624436899025362905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e83f2e6a4b6cd1e4b80b8187ec1d17a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 33a80f8cefd1d874d9f1723542d98c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 0

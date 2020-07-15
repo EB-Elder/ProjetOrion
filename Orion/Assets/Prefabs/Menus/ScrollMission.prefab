@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6596864698563149481}
   - component: {fileID: 1424688405792513594}
   - component: {fileID: 4322264556503427990}
-  - component: {fileID: 5125618227156356124}
+  - component: {fileID: 1193233791979425243}
   m_Layer: 5
   m_Name: ScrollMission
   m_TagString: Untagged
@@ -144,8 +144,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81cabd7661537413ca1d22a9097cd62b, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 644bcacbc427d5945ba274db8ffb7125, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5125618227156356124
+--- !u!114 &1193233791979425243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 828892328305025380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2cc81023a7ad5947ab8b4eaf8e596de, type: 3}
+  m_Script: {fileID: 11500000, guid: b066875f563ff9c448c70f14b88250c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   titreMission: {fileID: 1995458523494579476}

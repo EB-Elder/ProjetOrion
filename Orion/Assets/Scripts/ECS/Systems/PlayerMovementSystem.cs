@@ -19,9 +19,9 @@ public class PlayerMovementSystem : JobComponentSystem
         float deltaTime = Time.DeltaTime;
 
         //float2 curInput = new float2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        float f = -Input.GetAxis("LeftJoystickY");
-        float r = Input.GetAxis("LeftJoystickX");
-        float rotateX = Input.GetAxis("RightJoystickX");
+        float f = -Input.GetAxis("Vertical");
+        float r = Input.GetAxis("Horizontal");
+        float rotateX = Input.GetAxis("Mouse X");
 
         // ref veut dire qu'on peut à la fois lire et écrire dans Vel
         // In indique qu'on a que les droits de lecture sur 

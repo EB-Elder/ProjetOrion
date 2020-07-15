@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8190976971675425154}
-  - component: {fileID: 6758544445244888220}
+  - component: {fileID: 5660064440378178445}
   m_Layer: 0
   m_Name: ArmureEclair
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6758544445244888220
+--- !u!114 &5660064440378178445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,13 +40,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1199851781044018774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 149c108ca2cb83f4e8f269c360a377e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b10a324d397dcf4c80f8d531e71f7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: b4474690bf5c947249f3caed6c4ae764, type: 3}
+  itemSprite: {fileID: 21300000, guid: 07c5997ebcab7b84e98f5ec51df61235, type: 3}
   type: 1
-  nom: Armure Eclaire
-  description: "Armure augmentant les PV et octroie la capacit\xE9 d'invoquer un
-    bouclier avec RT (consomme de la stamina)"
+  nom: "Armure \xE9clair"
+  description: "Permet l'utilisation du bouclier de d\xE9fense"
   skill: 1
-  equip: 1
+  equip: 0
